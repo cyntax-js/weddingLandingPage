@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "utendo", sans-serif;
+  text-decoration: none !important;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  scroll-behavior: smooth;
+  transition: 2s ease-in;
+}
+body {
+  font-family: "utendo", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  background: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  background: #3b3b3b !important;
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #2c2c2c !important;
+  border-radius: 50px;
+}
+
+input:focus {
+  outline: none;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.no-scroll {
+  overflow: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+::selection {
+  background-color: #42c98a75;
+  color: #fff;
+}
+a {
+  color: #000000;
+  text-decoration-line: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.container {
+  width: -webkit-fill-available;
+  max-width: 1380px;
+  padding: 0em 1em;
+  height: 100%;
+  margin: auto;
+}
+.container_fluid {
+  width: -webkit-fill-available;
+  padding: 0 10px;
+}
+/* wui-connect-button ~ button {
+  background: #12b66f !important;
+  border-radius: 10px !important;
+  padding: 10px 20px !important;
+} */
