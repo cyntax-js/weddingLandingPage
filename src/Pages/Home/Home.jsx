@@ -78,7 +78,7 @@ const Home = () => {
   };
 
   const imageUploadNotice = () => {
-    toast.error(`Image Upload will be available on the 9th of January 2025!!`, {
+    toast.error(`Image Upload will be available on the 3rd of January 2025!!`, {
       duration: 5000,
       className: "toast_success",
     });
