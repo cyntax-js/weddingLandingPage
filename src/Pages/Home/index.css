@@ -244,9 +244,23 @@
   font-size: 20px;
   color: #ffffffed;
   margin-top: 20px;
-  width: 50%;
+  width: 80%;
   text-align: center;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.HomeDiv_section3_area_para_img {
+  background: #fff;
+  color: #3c452a;
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
 }
 .HomeDiv_section3_area_btn_div {
   margin-top: 4em;
@@ -303,7 +317,7 @@
 .HomeDiv_section2_area_1_para {
   line-height: 1.5;
   color: #949a89;
-  width: 50%;
+  width: 80%;
   margin-top: 10px;
 }
 .HomeDiv_section2_area_1_btn_div {
@@ -354,7 +368,7 @@
   position: relative;
   z-index: 1;
   font-size: 82px;
-  width: 60%;
+  width: 80%;
   /* text-align: center; */
   font-family: "URWClassico", sans-serif;
   color: #ffffff;
@@ -745,6 +759,14 @@ details[open] > summary::before {
     padding-top: 7em;
   }
 
+  .HomeDiv_section4_area_conts_div1_cont2 {
+    background: #ede3d9;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .HomeDiv_section1_area_div2 {
     margin-bottom: 1em;
     margin-left: 0;
@@ -766,31 +788,33 @@ details[open] > summary::before {
     top: -17px;
   }
   .HomeDiv_section4_area_conts {
-    margin-top: 5em;
-    display: flex;
+    margin-top: 3em;
+    display: -webkit-box;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
   }
   .HomeDiv_section4_area_conts_div1 {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 400px;
     width: -webkit-fill-available;
-    max-width: 500px;
+    max-width: 250px;
   }
   .HomeDiv_section4_area_conts_div2 {
-    margin: 2em 0em;
+    margin: 0em 1em;
     display: flex;
     flex-direction: column;
-    height: 650px;
+    height: 400px;
     width: -webkit-fill-available;
-    max-width: 500px;
+    max-width: 250px;
   }
   .HomeDiv_section4_area_conts_div1_cont2_title {
-    font-size: 32px;
+    font-size: 24px;
   }
   .HomeDiv_section4_area_conts_div1_cont2_para {
-    font-size: 16px;
+    font-size: 14px;
+    margin-top: 10px;
   }
   .section3_line1 {
     width: 100px;
@@ -858,7 +882,7 @@ details[open] > summary::before {
     padding: 4em 0em;
   }
   .HomeDiv_section2 {
-    padding: 4em 0em;
+    padding: 3em 0em;
   }
   .HomeDiv_section6_area_body_div1 {
     width: -webkit-fill-available;

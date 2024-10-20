@@ -77,6 +77,13 @@ const Home = () => {
     });
   };
 
+  const imageUploadNotice = () => {
+    toast.error(`Image Upload will be available on the 9th of January 2025!!`, {
+      duration: 5000,
+      className: "toast_success",
+    });
+  };
+
   return (
     <div className="HomeDiv">
       <section className="HomeDiv_section1">
@@ -143,7 +150,7 @@ const Home = () => {
           <div className="HomeDiv_section4_area">
             <div className="HomeDiv_section4_area_div1">
               <div className="HomeDiv_section4_area_tag">
-                THERE IS SOMEONE FOR EVERYONE
+                ENJOY OUR MOMENT WITH US
               </div>
               <div className="HomeDiv_section4_area_title">
                 WELCOME TO OUR WEDDING
@@ -169,7 +176,7 @@ const Home = () => {
                   </div>
                   <div className="HomeDiv_section4_area_conts_div1_cont2_para">
                     Join us in celebrating a beautiful day of love, joy, and
-                    togetherness as we say 'I do.
+                    togetherness as we say "I do".
                   </div>
                 </div>
               </div>
@@ -229,19 +236,16 @@ const Home = () => {
               className="HomeDiv_section3_area_img"
             />
             <div className="HomeDiv_section3_area_tag">
-              ENJOY OUR MOMENT TOGETHER
+              ENJOY OUR MOMENT WITH US
             </div>
             <div className="HomeDiv_section3_area_title">COME WITH US</div>
             <div className="HomeDiv_section3_area_para">
               Saturday, January 3rd, 2025 Ikeja Lagos, Nigeria.
+              <span className="HomeDiv_section3_area_para_img">
+                {" "}
+                This event is strictly by invitation!
+              </span>
             </div>
-            {/* <div className="HomeDiv_section3_area_btn_div">
-              <img
-                src="/img/section3_btn_img.svg"
-                alt=""
-                className="HomeDiv_section3_area_btn_div_img"
-              />
-            </div> */}
           </div>
         </div>
         <img
@@ -262,13 +266,20 @@ const Home = () => {
           <div className="HomeDiv_section2_area">
             <div className="HomeDiv_section2_area_1">
               <div className="HomeDiv_section2_area_1_tag">
-                ENJOY OUR MOMENT TOGETHER
+                ENJOY OUR MOMENT WITH US
               </div>
               <div className="HomeDiv_section2_area_1_title">Our Story</div>
               <div className="HomeDiv_section2_area_1_para">
-                We met in college and have been inseparable ever since. Our love
-                story is one of adventure, laughter, and endless support. We
-                can't wait to celebrate our special day with all of you!
+                We met on the parade ground during NYSC orientation camp in 2017
+                and became instant friends. After two years of friendship, we
+                realized our connection was something more and started dating.
+                Since then, we've been inseparable, growing stronger together
+                with every moment.
+                <br />
+                <br />
+                Now, we're excited to take the next step and begin the rest of
+                our lives together. We can't wait to celebrate this special day
+                with you! #foreverSC
               </div>
               <div className="HomeDiv_section2_area_1_btn_div">
                 <img
@@ -298,15 +309,16 @@ const Home = () => {
           <div className="HomeDiv_section5_area">
             <div className="HomeDiv_section5_area_cont1">
               <div className="HomeDiv_section5_area_cont1_tag">
-                ENJOY OUR MOMENT TOGETHER
+                ENJOY OUR MOMENT WITH US
               </div>
               <div className="HomeDiv_section5_area_cont1_title2">
                 <div className="HomeDiv_section5_area_cont1_title2_text">
-                  WE ARE WITH YOU ALL THE WAY{" "}
+                  SHARE YOUR CAPTURED MOMENTS{" "}
                 </div>
                 <button
                   className="UploadImageButton"
-                  onClick={toggleImageUploadModal}
+                  // onClick={toggleImageUploadModal}
+                  onClick={imageUploadNotice}
                 >
                   Upload Image
                 </button>
@@ -339,7 +351,7 @@ const Home = () => {
         <div className="container">
           <div className="HomeDiv_section6_area">
             <div className="HomeDiv_section5_area_cont1_tag">
-              ENJOY OUR MOMENT TOGETHER
+              ENJOY OUR MOMENT WITH US
             </div>
             <div className="HomeDiv_section6_area_title">PROGRAMS</div>
             <div className="HomeDiv_section6_area_body">
@@ -462,7 +474,7 @@ const Home = () => {
         <div className="container">
           <div className="HomeDiv_section8_area">
             <div className="HomeDiv_section7_area_tag">
-              ENJOY OUR MOMENT TOGETHER
+              ENJOY OUR MOMENT WITH US
             </div>
             <div className="HomeDiv_section8_area_title">Getting There</div>
             <div className="HomeDiv_section8_area_para">
@@ -544,7 +556,9 @@ const Home = () => {
                   Can I bring a plus-one?
                 </summary>
                 <div className="accordion_body">
-                  <div className="accordion_body_cont1">No</div>
+                  <div className="accordion_body_cont1">
+                    One access card permits only one entry.
+                  </div>
                 </div>
               </details>
               <details className="newHome_div_section7_area_body_accordion_body">
