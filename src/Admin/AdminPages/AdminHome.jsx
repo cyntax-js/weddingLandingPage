@@ -157,9 +157,9 @@ const AdminHome = () => {
     fetchAllInvitations();
   }, []);
 
-  const pending = invitations?.filter((data) => data.approve === "FALSE");
-  const revoked = invitations?.filter((data) => data.approve === "REVOKE");
-  const authorized = invitations?.filter((data) => data.approve === "TRUE");
+  const pending = invitations?.filter((data) => data?.approve === "FALSE");
+  const revoked = invitations?.filter((data) => data?.approve === "REVOKE");
+  const authorized = invitations?.filter((data) => data?.approve === "TRUE");
   console.log("====================================");
   console.log(pending);
   console.log(revoked);
@@ -222,8 +222,8 @@ const AdminHome = () => {
   const currentOrigin = window.location.origin;
   console.log(currentOrigin);
 
-  const filteredInvitations = filteredTransactions.filter((data) =>
-    data.groupName.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredInvitations = filteredTransactions?.filter((data) =>
+    data?.groupName?.toLowerCase().includes(searchQuery?.toLowerCase())
   );
   return (
     <div className="AdminHomeDiv">
@@ -445,10 +445,10 @@ const AdminHome = () => {
                 <tbody className="adminHomeDivArea_3_body_table_body">
                   {filteredInvitations
                     ?.sort(
-                      (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+                      (a, b) => new Date(b?.createdAt) - new Date(a?.createdAt)
                     )
-                    .map((data) => {
-                      const invitationCodes = data.accessCodes.split("-");
+                    ?.map((data) => {
+                      const invitationCodes = data?.accessCodes?.split("-");
                       function formatDate(dateString) {
                         const date = new Date(dateString);
 
@@ -462,20 +462,20 @@ const AdminHome = () => {
                         >
                           <td className="adminHomeDivArea_3_body_table_body_row_child">
                             <div className=" adminHomeDivArea_3_body_table_body_row_child_div">
-                              {data.groupName}
+                              {data?.groupName}
                             </div>
                           </td>
                           <td className="adminHomeDivArea_3_body_table_body_row_child">
                             <div className=" adminHomeDivArea_3_body_table_body_row_child_div">
-                              {data.numberOfInvites}
+                              {data?.numberOfInvites}
                             </div>
                           </td>
                           <td className="adminHomeDivArea_3_body_table_body_row_child">
                             <div className=" adminHomeDivArea_3_body_table_body_row_child_div">
-                              {invitationCodes.length < 2
+                              {invitationCodes?.length < 2
                                 ? invitationCodes
                                 : `${invitationCodes[0]}...(+${
-                                    invitationCodes.length - 1
+                                    invitationCodes?.length - 1
                                   })`}
                             </div>
                           </td>
@@ -483,18 +483,18 @@ const AdminHome = () => {
                             {/* <div className=" adminHomeDivArea_3_body_table_body_row_child_div"> */}
                             <div
                               className={
-                                data.approve === "REVOKE"
+                                data?.approve === "REVOKE"
                                   ? "adminHomeDivArea_3_body_table_body_row_child_div_status_revoke"
-                                  : data.approve === "TRUE"
+                                  : data?.approve === "TRUE"
                                   ? "adminHomeDivArea_3_body_table_body_row_child_div_status_approve"
                                   : "adminHomeDivArea_3_body_table_body_row_child_div_status"
                               }
                             >
-                              {data.approve === "FALSE"
+                              {data?.approve === "FALSE"
                                 ? "NEW"
-                                : data.approve === "TRUE"
+                                : data?.approve === "TRUE"
                                 ? "AUTHORIZED"
-                                : data.approve}
+                                : data?.approve}
                               {/* </div> */}
                             </div>
                           </td>
@@ -518,8 +518,8 @@ const AdminHome = () => {
         </div>
       </div>
 
-      {invitations.map((data) => {
-        const invitationCodes = data.accessCodes.split("-");
+      {invitations?.map((data) => {
+        const invitationCodes = data?.accessCodes.split("-");
         function formatDate(dateString) {
           const date = new Date(dateString);
 
@@ -527,7 +527,7 @@ const AdminHome = () => {
         }
         return (
           <>
-            {data.id == seeMoreDiv ? (
+            {data?.id == seeMoreDiv ? (
               <div className="seemore_div">
                 <div
                   className="seemore_div_close_div"
@@ -545,18 +545,18 @@ const AdminHome = () => {
                       <div className="seemore_div_cont_2_cont_2">
                         <div
                           className={
-                            data.approve === "REVOKE"
+                            data?.approve === "REVOKE"
                               ? "adminHomeDivArea_3_body_table_body_row_child_div_status_revoke"
-                              : data.approve === "TRUE"
+                              : data?.approve === "TRUE"
                               ? "adminHomeDivArea_3_body_table_body_row_child_div_status_approve"
                               : "adminHomeDivArea_3_body_table_body_row_child_div_status"
                           }
                         >
-                          {data.approve === "FALSE"
+                          {data?.approve === "FALSE"
                             ? "NEW"
-                            : data.approve === "TRUE"
+                            : data?.approve === "TRUE"
                             ? "AUTHORIZED"
-                            : data.approve}
+                            : data?.approve}
                           {/* </div> */}
                         </div>
                       </div>
@@ -566,7 +566,7 @@ const AdminHome = () => {
                         Amount of Invitation(s)
                       </div>
                       <div className="seemore_div_cont_2_cont_2">
-                        {data.numberOfInvites}
+                        {data?.numberOfInvites}
                       </div>
                     </div>
                     <div className="seemore_div_cont_2_cont">
@@ -574,7 +574,7 @@ const AdminHome = () => {
                         Access Code(s)
                       </div>
                       <div className="seemore_div_cont_2_cont_2">
-                        {invitationCodes.join(" / ")}
+                        {invitationCodes?.join(" / ")}
                       </div>
                     </div>
                     <div className="seemore_div_cont_2_cont">
@@ -658,7 +658,7 @@ const AdminHome = () => {
           ></div>
           <div className="seemore_div_cont">
             <div className="seemore_div_cont_1">
-              {payload.groupName || "--"}
+              {payload?.groupName || "--"}
               {/* <div className="seemore_div_cont_title">{successMessage}</div> */}
             </div>
             <div className="seemore_div_cont_2">
@@ -684,7 +684,7 @@ const AdminHome = () => {
             <div className="inivite_success_div_div_cont_3">
               <input
                 type="text"
-                value={`${currentOrigin}/${payload.groupName}/${inviteCodes}`}
+                value={`${currentOrigin}/${payload?.groupName}/${inviteCodes}`}
                 className="invitation_link_div_input"
                 ref={inputRef}
               />
