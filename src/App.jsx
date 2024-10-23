@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       {currentPath[2] === "admin" ? null : <Header />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/access/:name/:code" element={<Home />} />
-        <Route path="/couple/admin" element={<Admin />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/access/:name/:code" element={<Home />} />
+        <Route exact path="/couple/admin" element={<Admin />} />
       </Routes>
       {currentPath[2] === "admin" ? null : <Footer />}
     </div>
