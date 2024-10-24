@@ -126,7 +126,7 @@ const Home = () => {
                   Today and Forever.
                 </div>
               </div>
-              <div
+              {/* <div
                 className="HomeDiv_section1_area_div1_btn_div
               "
               >
@@ -135,7 +135,7 @@ const Home = () => {
                   alt="HomeDiv_section1_area_div1_btn_div_img"
                   className="HomeDiv_section1_area_div1_btn_div_img"
                 />
-              </div>
+              </div> */}
             </div>
             <div className="HomeDiv_section1_area_div2">
               <img
@@ -299,13 +299,13 @@ const Home = () => {
                 our lives together. We can't wait to celebrate this special day
                 with you! #foreverSC
               </div>
-              <div className="HomeDiv_section2_area_1_btn_div">
+              {/* <div className="HomeDiv_section2_area_1_btn_div">
                 <img
                   src="/img/section2_button_img.svg"
                   alt=""
                   className="HomeDiv_section2_area_1_btn_div_img"
                 />
-              </div>
+              </div> */}
             </div>
             <div className="HomeDiv_section2_area_2">
               <img
