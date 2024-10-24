@@ -3,25 +3,31 @@ import "./index.css";
 import TicketModal from "../../Components/TcketModal/TicketModal";
 import { Link, useParams } from "react-router-dom";
 import Marquee from "react-fast-marquee";
-import { UPLOAD_IMAGE, GET_IMAGES } from "../../services/AdminService";
+import {
+  UPLOAD_IMAGE,
+  GET_IMAGES,
+  CHECK_INVITATION,
+} from "../../services/AdminService";
 import toast, { Toaster } from "react-hot-toast";
 import ClipLoader from "react-spinners/ClipLoader";
 import { BASE_URL } from "../../config/core";
 
 const Home = () => {
-  const { name, code } = useParams();
+  const { name, code, id } = useParams();
   const [ticketModal, setTiicketModal] = useState(false);
   const [uploadImageModal, setUploadaImageModal] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(null);
+  const [invitationStatus, setInvitationStatus] = useState("FALSE");
   console.log("====================================");
-  console.log(code);
+  console.log(code, id);
   console.log("====================================");
   const toggleImageUploadModal = () => {
     setUploadaImageModal(true);
   };
+
   useEffect(() => {
     if (code !== undefined) {
       setTiicketModal(true);
@@ -29,11 +35,13 @@ const Home = () => {
       setTiicketModal(false);
     }
   }, [code]);
+
   const fetchImages = async () => {
     const res = await GET_IMAGES();
     console.log(res);
     setImages(res?.data?.data);
   };
+
   useEffect(() => {
     fetchImages();
   }, []);
@@ -65,7 +73,7 @@ const Home = () => {
         className: "toast_success",
       });
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.reload();
       }, 500);
 
       return;
@@ -83,6 +91,16 @@ const Home = () => {
       className: "toast_success",
     });
   };
+  const checkInvitation = async () => {
+    const res = await CHECK_INVITATION(id);
+    console.log("====================================");
+    console.log(res);
+    setInvitationStatus(res.data.status);
+    console.log("====================================");
+  };
+  useEffect(() => {
+    checkInvitation();
+  }, [id]);
 
   return (
     <div className="HomeDiv">
@@ -594,7 +612,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {ticketModal && <TicketModal code={code} name={name} />}
+      {ticketModal && (
+        <TicketModal
+          code={code}
+          name={name}
+          invitationStatus={invitationStatus}
+        />
+      )}
       {uploadImageModal && (
         <div className="seemore_div">
           <div

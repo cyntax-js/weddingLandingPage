@@ -149,7 +149,30 @@ canvas#react-qrcode-logo {
 .ticketModlDiv_cont_cont2_div2_ticket_div_div1_cont2_img {
   width: 30px;
 }
-
+.accessCodeRevokeDiv {
+  width: -webkit-fill-available;
+  max-width: 500px;
+  /* margin: auto; */
+  background: #fff;
+  padding: 2em 1em;
+  border-radius: 10px;
+}
+.accessCodeRevokeDiv_body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.accessCodeRevokeDiv_body_title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ee4444;
+}
+.accessCodeRevokeDiv_body_para {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #545454;
+}
 @media (max-width: 990px) {
   .ticketModlDiv_cont {
     flex-direction: column-reverse;

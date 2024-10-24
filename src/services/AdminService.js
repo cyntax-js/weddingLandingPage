@@ -6,6 +6,7 @@ import {
   CHANGE_INVITATION_STATUS,
   UPLOAD_IMAGE_TO_GALLERY,
   GET_ALL_IMAGES,
+  CHECK_INVITAION_ROUTES,
 } from "../config/routes";
 
 export const CREATE_INVITATION = async (payload) => {
@@ -13,6 +14,16 @@ export const CREATE_INVITATION = async (payload) => {
     const response = await axios.post(
       `${BASE_URL}${CREATE_INVITATION_ROUTE}`,
       payload
+    );
+    return response.data;
+  } catch (error) {
+    return error?.response?.data || error?.response || error.message;
+  }
+};
+export const CHECK_INVITATION = async (id) => {
+  try {
+    const response = await axios.get(
+      `${BASE_URL}${CHECK_INVITAION_ROUTES}/${id}`
     );
     return response.data;
   } catch (error) {

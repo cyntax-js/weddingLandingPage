@@ -17,6 +17,7 @@ const AdminHome = () => {
   const [filteredTransactions, setFilteredTransactions] = useState([]);
   const [rsvpSuccess, setRsvpSuccess] = useState(false);
   const [inviteCodes, setInviteCodes] = useState("");
+  const [inviteId, setInviteId] = useState("");
   const [rsvpError, setRsvpError] = useState(false);
   const [sendRsvpLoading, setSendRsvpLoading] = useState(false);
   const [sendRsvpDisable, setSendRsvpDisable] = useState(false);
@@ -68,8 +69,9 @@ const AdminHome = () => {
 
       // setSuccessMessage(res.data.message);
       setInviteCodes(res.data.code);
+      setInviteId(res.data.id);
       setTimeout(() => {
-        window.location.href = "/couple/admin";
+        window.location.reload();
       }, 500);
       return;
     }
@@ -101,7 +103,7 @@ const AdminHome = () => {
           className: "toast_success",
         });
         setTimeout(() => {
-          window.location.href = "/couple/admin";
+          window.location.reload();
         }, 500);
         return;
       }
@@ -131,7 +133,7 @@ const AdminHome = () => {
           className: "toast_success",
         });
         setTimeout(() => {
-          window.location.href = "/couple/admin";
+          window.location.reload();
         }, 500);
         return;
       }
@@ -620,7 +622,11 @@ const AdminHome = () => {
                   <div className="inivite_success_div_div_cont_3">
                     <input
                       type="text"
-                      value={`${currentOrigin}/access/${data?.groupName}/${data?.accessCodes}`}
+                      value={`${currentOrigin}/access/${
+                        data?.id
+                      }/${data?.groupName.split(" ").join("-")}/${
+                        data?.accessCodes
+                      }`}
                       className="invitation_link_div_input"
                       ref={inputRef2}
                     />
@@ -684,7 +690,9 @@ const AdminHome = () => {
             <div className="inivite_success_div_div_cont_3">
               <input
                 type="text"
-                value={`${currentOrigin}/${payload?.groupName}/${inviteCodes}`}
+                value={`${currentOrigin}/access/${inviteId}/${payload?.groupName
+                  .split(" ")
+                  .join("-")}/${inviteCodes}`}
                 className="invitation_link_div_input"
                 ref={inputRef}
               />
