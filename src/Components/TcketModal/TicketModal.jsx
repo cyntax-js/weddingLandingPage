@@ -63,12 +63,32 @@ const TicketModal = ({ code, name, invitationStatus }) => {
                   alt=""
                   className="ticketModlDiv_cont_cont2_div1_cont1_img"
                 />
-                <div className="ticketModlDiv_cont_cont2_div1_cont1_area">
-                  <div className="ticketModlDiv_cont_cont2_div1_cont1_area_title">
-                    Event Date
+                <div className="ticketModlDiv_cont_cont2_div1_cont1_area2">
+                  <div className="ticketModlDiv_cont_cont2_div1_cont1_area_divs1">
+                    <div className="ticketModlDiv_cont_cont2_div1_cont1_area_title">
+                      Event Date
+                    </div>
+                    <div className="ticketModlDiv_cont_cont2_div1_cont1_area_txt">
+                      3rd Jan 2025
+                    </div>
                   </div>
-                  <div className="ticketModlDiv_cont_cont2_div1_cont1_area_txt">
-                    3rd Jan 2025, 9:00 PM
+                  <div className="ticketModlDiv_cont_cont2_div1_cont1_area_divs2">
+                    <div className="ticketModlDiv_cont_cont2_div1_cont1_area_divs2_div1">
+                      <div className="ticketModlDiv_cont_cont2_div1_cont1_area_title">
+                        Time/Church
+                      </div>
+                      <div className="ticketModlDiv_cont_cont2_div1_cont1_area_txt">
+                        10:00am
+                      </div>
+                    </div>
+                    <div className="ticketModlDiv_cont_cont2_div1_cont1_area_divs2_div1">
+                      <div className="ticketModlDiv_cont_cont2_div1_cont1_area_title">
+                        Time/Reception
+                      </div>
+                      <div className="ticketModlDiv_cont_cont2_div1_cont1_area_txt">
+                        2:00pm
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
