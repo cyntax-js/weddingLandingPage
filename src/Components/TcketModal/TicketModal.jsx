@@ -78,7 +78,7 @@ const TicketModal = ({ code, name, invitationStatus }) => {
                         Time/Church
                       </div>
                       <div className="ticketModlDiv_cont_cont2_div1_cont1_area_txt">
-                        10:00am
+                        11:00am
                       </div>
                     </div>
                     <div className="ticketModlDiv_cont_cont2_div1_cont1_area_divs2_div1">
