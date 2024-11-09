@@ -29,7 +29,7 @@ const TicketModal = ({ code, name, invitationStatus }) => {
         <div className="ticketModlDiv_cont">
           <div className="ticketModlDiv_cont_cont1">
             <img
-              src="/img/weddingCardImage2.jpg"
+              src="/img/weddingCardImage3.jpg"
               alt=""
               className="ticketModlDiv_cont_cont1_img"
             />
