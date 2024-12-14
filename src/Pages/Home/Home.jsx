@@ -379,49 +379,46 @@ const Home = () => {
                 </div>
                 <div className="HomeDiv_section6_area_body_div1_body">
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Welcome and Introduction
-                  </div>
-                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Arrival of the couple’s parents
-                  </div>
-                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Arrival of the Bridal Party
-                  </div>
-                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Arrival of the Couple
+                    Processional Hymn
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
                     Opening Prayer
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
+                    Wedding Address
+                  </div>
+                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
+                    Hymn
+                  </div>
+                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
+                    Joining & Vows
+                  </div>
+                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
                     Chairman’s Remark
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Toasts
+                    Signing of Register
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Cake Cutting
+                    Prayer for the Couple
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    First Dance
+                    Charge / Pronouncement / Presentation of the Couple
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Father – Daughter Dance and Mother – Son dance
+                    Special Worship / Hymn
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Dancing/Entertainments
+                    The Message
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Bouquet and Garter Toss
+                    Thanksgiving & Offering
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Special Performances
+                    Announcement
                   </div>
                   <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Closing Remarks
-                  </div>
-                  <div className="HomeDiv_section6_area_body_div1_body_cont1">
-                    Farewell
+                    Recessional Hymn
                   </div>
                 </div>
               </div>
