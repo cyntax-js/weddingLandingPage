@@ -335,8 +335,8 @@ const Home = () => {
                 </div>
                 <button
                   className="UploadImageButton"
-                  // onClick={toggleImageUploadModal}
-                  onClick={imageUploadNotice}
+                  onClick={toggleImageUploadModal}
+                  // onClick={imageUploadNotice}
                 >
                   Upload Image
                 </button>

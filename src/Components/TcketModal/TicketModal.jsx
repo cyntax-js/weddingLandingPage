@@ -23,6 +23,7 @@ const TicketModal = ({ code, name, invitationStatus }) => {
             <div className="accessCodeRevokeDiv_body_para">
               Your access code was revoked by an admin due to some reasons.
             </div>
+
           </div>
         </div>
       ) : (
